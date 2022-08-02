@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "raleway";
+  src: url("Raleway-VariableFont_wght.ttf");
+}
+
+* {
+  font-family: "raleway", Arial, Helvetica, sans-serif;
+}
+
+footer {
+  background-color: #f2f2f2;
+  display: flex;
+  min-height: 200px;
+}
+
+.container {
+  display: flex;
+  margin: auto;
+  max-width: 90%;
+  width: 100%;
+}
+
+.about,
+.housing,
+.help {
+  width: 30%;
+}
+
+li {
+  list-style: none;
+  line-height: 1.8;
+  display: list-item;
+  box-sizing: border-box;
+}
+
+ul {
+  padding-left: 0%;
+}
+
+@media screen and (max-width: 780px) {
+  .about,
+  .housing,
+  .help {
+    width: 100%;
+  }
+  .container {
+    flex-wrap: wrap;
+  }
+}
+
+/*<span> pour remplacer les <h>??*/
