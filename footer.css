@@ -13,6 +13,10 @@ footer {
   min-height: 200px;
 }
 
+h1 {
+  font-size: medium;
+}
+
 .container {
   display: flex;
   margin: auto;
