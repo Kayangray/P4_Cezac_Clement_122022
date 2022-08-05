@@ -1,6 +1,15 @@
+:root {
+  --grey: #f2f2f2;
+}
+
 @font-face {
   font-family: "raleway";
   src: url("Raleway-VariableFont_wght.ttf");
+}
+
+div,
+body {
+  margin: 0;
 }
 
 * {
@@ -8,25 +17,17 @@
 }
 
 footer {
-  background-color: #f2f2f2;
+  background-color: var(--grey);
   display: flex;
-  min-height: 200px;
+  width: 100%;
+  padding: 20px 10px;
 }
 
 h1 {
   font-size: medium;
 }
 
-.container {
-  display: flex;
-  margin: auto;
-  max-width: 90%;
-  width: 100%;
-}
-
-.about,
-.housing,
-.help {
+footer > div {
   width: 30%;
 }
 
@@ -42,13 +43,11 @@ ul {
 }
 
 @media screen and (max-width: 780px) {
-  .about,
-  .housing,
-  .help {
+  footer > div {
     width: 100%;
   }
-  .container {
-    flex-wrap: wrap;
+  footer {
+    flex-direction: column;
   }
 }
 
