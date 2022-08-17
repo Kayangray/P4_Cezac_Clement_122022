@@ -1,3 +1,7 @@
+:root {
+  --grey: #f2f2f2;
+}
+
 @font-face {
   font-family: "raleway";
   src: url("Raleway-VariableFont_wght.ttf");
@@ -5,4 +9,153 @@
 
 * {
   font-family: "raleway", Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0%;
+}
+
+header {
+  padding: 20px 10px;
+}
+
+h1{
+  font-size: medium;
+}
+
+.div_h1 {
+  line-height: 20px;
+}
+
+form {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid #f2f2f2;
+  width: max-content;
+  border-radius: 10px;
+}
+
+label > i {
+  background-color: var(--grey);
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  border-radius: 10px 0 0 10px;
+}
+
+label {
+  text-align: center;
+}
+
+#destination {
+  margin-left: 10px;
+  border-style: none;
+  padding: 10px;
+}
+
+::placeholder {
+  color: black;
+  font-weight: bold;
+  opacity: 1;
+}
+
+#destination:focus {
+  outline: none;
+}
+
+#search {
+  background-color: #0065fc;
+  height: 40px;
+  width: 100px;
+  border-radius: 0 10px 10px 0;
+  border-style: none;
+  font-weight: 800;
+  color: antiquewhite;
+}
+
+.filtres {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.filtres > p {
+  font-weight: 500;
+}
+
+.filtres > ul {
+  display: flex;
+  list-style: none;
+  padding-left: 15px;
+}
+
+.filtres > ul > li {
+  display: flex;
+  margin: 10px;
+  border: 1px solid lightgrey;
+  height: 40px;
+  width: auto;
+  border-radius: 20px 20px 20px 20px;
+  align-items: center;
+  font-weight: 500;
+}
+
+.filtres > ul > li > i {
+  display: flex;
+  color: #0065fc;
+  background-color: #dfecff;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px 20px 20px 20px;
+  align-items: center;
+  justify-content: center;
+  outline: 1px solid #dfecff;
+  margin-left: -1px;
+}
+
+.filtres > ul > li > p {
+  padding: 10px;
+  margin-right: 5px;
+}
+
+.info {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.info > i {
+  display: flex;
+  border: 1px solid #f2f2f2;
+  color: #0065fc;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px 20px 20px 20px;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 780px) {
+  header > div {
+    width: 100%;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  .filtres {
+    display: flex;
+    flex-direction: column;
+  }
+  .filtres > ul {
+    flex-flow: row wrap;
+  }
+  .filtres > ul > li {
+    flex: auto;
+    min-width: 50%;
+  }
 }
