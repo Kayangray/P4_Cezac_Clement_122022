@@ -19,7 +19,7 @@ header {
   padding: 20px 10px;
 }
 
-h1{
+h1 {
   font-size: medium;
 }
 
@@ -105,13 +105,13 @@ label {
 .filtres > ul > li > i {
   display: flex;
   color: #0065fc;
-  background-color: #dfecff;
+  background-color: #deebff;
   width: 40px;
   height: 40px;
   border-radius: 20px 20px 20px 20px;
   align-items: center;
   justify-content: center;
-  outline: 1px solid #dfecff;
+  outline: 1px solid #deebff;
   margin-left: -1px;
 }
 
@@ -158,4 +158,8 @@ label {
     flex: auto;
     min-width: 50%;
   }
+}
+
+li:hover {
+  background-color: #deebff;
 }
