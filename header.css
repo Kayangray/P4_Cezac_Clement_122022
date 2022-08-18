@@ -94,12 +94,12 @@ label {
 .filtres > ul > li {
   display: flex;
   margin: 10px;
-  border: 1px solid lightgrey;
+  border: 2px solid lightgrey;
   height: 40px;
   width: auto;
   border-radius: 20px 20px 20px 20px;
   align-items: center;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .filtres > ul > li > i {
