@@ -1,0 +1,215 @@
+$primary: #9356DC;
+$secondary: #FF79DA;
+$tertiary: #99E2D0;
+
+@mixin card {
+    width: 90%;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgb(229 229 229 / 89%);
+}
+
+@mixin btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40%;
+    width: auto;
+    height: 50px;
+    background: linear-gradient(180deg, $secondary, $primary );
+    border: none; 
+    border-radius: 50px;
+}
+
+@mixin funtionbtn {
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgb(229 229 229 / 89%);
+    width: 85%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background-color: #f7f7f7;
+    &:hover {
+      background-color: lighten($primary, 35%);
+      .fa-mobile-screen-button {
+        color: $primary;
+      }
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    * {
+      font-family: "Roboto";
+    }
+  
+    body {
+      margin: 0;
+      width: 100%;
+    }
+  
+    div,
+    p,
+    h3,
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+  
+    .heading,
+    .location {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .location {
+      gap: 20px;
+      padding-right: 35px;
+      background-color: #ededed;
+    }
+  
+    h1,
+    h4 {
+      font-family: "Shrikhand";
+    }
+  
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f7f7f7;
+    }
+
+    .btn {
+      @include btn;
+      span {
+        color: white;
+      }
+    }
+  
+    .btncontainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding-bottom: 40px;
+    }
+  
+    .functionbtn {
+      @include funtionbtn;
+      .number {
+        display: flex;
+        justify-content: center;
+        background-color: $primary;
+        color: white;
+        border-radius: 50%;
+        width: 20px;
+        position: absolute;
+        left: -10px;
+        padding: 5px;
+      }
+      .icon {
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        margin-left: 10px;
+        color: grey;
+      }
+      span {
+        flex: auto;
+        font-weight: bold;
+      }
+
+    }
+
+    .container {
+      background-color: #f7f7f7;
+      padding: 40px 0;
+    }
+  
+    .card_container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .card {
+      @include card;
+      .card_img {
+        position: relative;
+      }
+      .card_img img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+    }
+
+    .new {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: $tertiary;
+      border-radius: 2px;
+      color: #588378;
+      padding: 5px;
+      font-size: smaller;
+      font-weight: bold;
+      display: flex;
+      width: 75px;
+      justify-content: center;
+    }
+  
+    .card_footer {
+      display: flex;
+      justify-content: space-between;
+      height: 70px;
+      .card_footer_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        padding-left: 15px;
+      }
+    }
+
+    .card_footer_button {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0px 30px 10px;
+      font-size: x-large;
+      &:not(:hover){
+        .fa-solid {
+          display: none;
+        }
+        .fa-regular {
+          display: block;
+        }
+      }
+        &:hover {
+          .fa-solid {
+            display: block;
+            color: $primary;
+          }
+          .fa-regular {
+            display: none;
+          }
+        }
+      }
+          
+    footer {
+      width: 100%;
+      background-color: #333;
+      color: white;
+      h4 {
+        margin-block-start: 0;
+      }
+    }
+  }
+  
