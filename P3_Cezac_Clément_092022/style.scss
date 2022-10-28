@@ -1,45 +1,4 @@
-$primary: #9356dc;
-$secondary: #ff79da;
-$tertiary: #99e2d0;
-
-@mixin card {
-  width: 90%;
-  border-radius: 20px;
-  overflow: hidden;
-  background-color: white;
-  box-shadow: 5px 5px 5px rgb(229 229 229 / 89%);
-}
-
-@mixin btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 40%;
-  width: auto;
-  height: 50px;
-  background: linear-gradient(180deg, $secondary, $primary);
-  border: none;
-  border-radius: 50px;
-  padding: 0 20px;
-}
-
-@mixin funtionbtn {
-  display: flex;
-  border-radius: 20px;
-  box-shadow: 5px 5px 5px rgb(229 229 229 / 89%);
-  width: 85%;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  height: 80px;
-  background-color: #f7f7f7;
-  &:hover {
-    background-color: lighten($primary, 35%);
-    .fa-mobile-screen-button {
-      color: $primary;
-    }
-  }
-}
+@import "style/mixin.scss";
 
 @media screen and (max-width: 767px) {
   * {
@@ -63,6 +22,7 @@ $tertiary: #99e2d0;
   .heading {
     border-bottom: 1px solid black;
     padding: 20px 0 5px 0;
+    position: relative;
   }
 
   .heading,
@@ -205,21 +165,18 @@ $tertiary: #99e2d0;
     justify-content: center;
     padding: 0px 30px 10px;
     font-size: x-large;
-    &:not(:hover) {
-      .fa-solid {
-        display: none;
-      }
-      .fa-regular {
-        display: block;
-      }
+    .fa-solid {
+      display: none;
+      color: $primary;
     }
     &:hover {
       .fa-solid {
         display: block;
-        color: $primary;
+        animation: fade-out 1000ms;
       }
       .fa-regular {
         display: none;
+        animation: fade-in 1000ms;
       }
     }
   }

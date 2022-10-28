@@ -6,26 +6,63 @@
     justify-content: center;
     background-color: #f2f2f2;
   }
-
   div,
-  p {
+p {
     margin: 0;
   }
-
   .plate {
     margin-top: 100px;
-    padding: 10px 20px 10px 10px;
+    padding: 10px 0px 10px 10px;
     width: calc(95% - 30px);
     background-color: white;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     gap: 4px;
-    box-shadow: 5px 5px 5px rgb(229 229 229 / 89%);
+    box-shadow: 5px 5px 5px rgba(229, 229, 229, 0.89);
+    position: relative;
+    overflow: hidden;
   }
-
   .plate_bottom {
     display: flex;
     justify-content: space-between;
   }
+  .plate_price {
+    padding-right: 20px;
+  }
+  .plate:not(:hover) .hidden {
+    position: absolute;
+    right: -80px;
+    height: 100%;
+    width: 80px;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    top: 0;
+    justify-content: center;
+    border-radius: 0 10px 10px 0px;
+  }
+  .plate:hover .hidden {
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    width: 80px;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    top: 0;
+    justify-content: center;
+    border-radius: 0 10px 10px 0px;
+  }
+  .plate:hover .hidden .hidden_icon {
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
 }
+
+/*# sourceMappingURL=alafrancaise.css.map */
