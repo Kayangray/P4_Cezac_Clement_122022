@@ -69,7 +69,7 @@ $tertiary: #99e2d0;
   position: absolute;
   height: 100%;
   width: 80px;
-  background-color: green;
+  background-color: $tertiary;
   display: flex;
   align-items: center;
   top: 0;
@@ -80,6 +80,7 @@ $tertiary: #99e2d0;
 @mixin hidden_icon {
   height: 30px;
   width: 30px;
+  color: $tertiary;
   background-color: white;
   display: flex;
   align-items: center;

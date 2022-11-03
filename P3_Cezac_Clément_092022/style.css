@@ -6,12 +6,14 @@
     opacity: 1;
   }
 }
-@keyframes fade-out {
+@keyframes slide-down {
   from {
-    opacity: 1;
+    transform: translateY(10px);
+    opacity: 0;
   }
   to {
-    opacity: 0;
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 body {
@@ -191,11 +193,13 @@ h4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0px 30px 10px;
+    margin: 0px 30px 10px;
     font-size: x-large;
   }
   .card_footer_button .fa-solid {
-    color: #9356dc;
+    background: -webkit-linear-gradient(90deg, #ff79da, #9356dc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     position: absolute;
     opacity: 0;
   }

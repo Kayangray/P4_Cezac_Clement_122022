@@ -167,10 +167,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0px 30px 10px;
+    margin: 0px 30px 10px;
     font-size: x-large;
     .fa-solid {
-      color: $primary;
+      background: -webkit-linear-gradient(90deg, $secondary, $primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       position: absolute;
       opacity: 0;
     }
