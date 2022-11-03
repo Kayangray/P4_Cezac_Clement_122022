@@ -1,19 +1,27 @@
-@media screen and (max-width: 767px) {
-  body {
-    width: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    background-color: #f2f2f2;
-  }
+@import "style/mixin.scss";
 
+$plate: 3;
+$anim-dur: 600ms;
+$anim-delay: $anim-dur/$plate;
+
+@media screen and (max-width: 767px) {
   div,
   p {
     margin: 0;
   }
 
   .plate {
-    margin-top: 100px;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2;
+    gap: 10px;
+    padding: 100px 0;
+  }
+
+  .plate__bar {
     padding: 10px 0px 10px 10px;
     width: calc(95% - 30px);
     background-color: white;
@@ -24,6 +32,13 @@
     box-shadow: 5px 5px 5px rgb(229 229 229 / 89%);
     position: relative;
     overflow: hidden;
+    opacity: 0;
+    animation: slide-down $anim-dur forwards;
+    @for $i from 1 through $plate {
+      &--#{$i} {
+        animation-delay: $anim-delay * $i;
+      }
+    }
   }
 
   .plate_bottom {
@@ -31,66 +46,53 @@
     justify-content: space-between;
   }
 
-  .plate_price {
-    padding-right: 20px;
-  }
-
-  //   .hidden {
-  //     position: absolute;
-  //     right: 0px;
-  //     height: 100%;
-  //     width: 20%;
-  //     background-color: green;
-  //     display: flex;
-  //     align-items: center;
-  //     top: 0;
-  //     justify-content: center;
-  //     border-radius: 0 10px 10px 0px;
-  //     .hidden_icon {
-  //       height: 30px;
-  //       width: 30px;
-  //       background-color: white;
-  //       display: flex;
-  //       align-items: center;
-  //       justify-content: center;
-  //       border-radius: 50%;
-  //     }
-
-  .plate:not(:hover) {
-    .hidden {
-      position: absolute;
-      right: -80px;
-      height: 100%;
-      width: 80px;
-      background-color: green;
-      display: flex;
-      align-items: center;
-      top: 0;
-      justify-content: center;
-      border-radius: 0 10px 10px 0px;
+  .plate_sub {
+    min-width: 0;
+    flex: 1;
+    margin-right: 0;
+    transition: margin-right 600ms;
+    p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
-  .plate:hover {
+
+  .plate_price {
+    padding: 0 20px 0 10px;
+    transition: all 400ms ease-in-out;
+  }
+
+  .hidden {
+    transition: all 400ms ease-in-out;
+    .hidden_icon {
+      @include hidden_icon;
+    }
+  }
+
+  .plate__bar:not(:hover) {
     .hidden {
-      position: absolute;
+      right: -80px;
+      @include hidden;
+    }
+  }
+
+  .plate__bar:hover {
+    .hidden {
       right: 0px;
-      height: 100%;
-      width: 80px;
-      background-color: green;
-      display: flex;
-      align-items: center;
-      top: 0;
-      justify-content: center;
-      border-radius: 0 10px 10px 0px;
-      .hidden_icon {
-        height: 30px;
-        width: 30px;
-        background-color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-      }
+      @include hidden;
+    }
+    .hidden_icon {
+      overflow: hidden;
+      transform: rotate(360deg);
+      transition: transform 600ms ease-in-out;
+    }
+    .plate_price {
+      transform: translateX(-80px);
+    }
+    .plate_sub {
+      transition: margin-right 600ms ease-in-out;
+      margin-right: 80px;
     }
   }
 }

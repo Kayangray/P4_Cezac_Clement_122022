@@ -1,5 +1,9 @@
 @import "style/mixin.scss";
 
+body {
+  animation: fade-in 5s;
+}
+
 @media screen and (max-width: 767px) {
   * {
     font-family: "Roboto";
@@ -166,17 +170,21 @@
     padding: 0px 30px 10px;
     font-size: x-large;
     .fa-solid {
-      display: none;
       color: $primary;
+      position: absolute;
+      opacity: 0;
+    }
+    .fa-regular {
+      position: relative;
     }
     &:hover {
-      .fa-solid {
-        display: block;
-        animation: fade-out 1000ms;
-      }
       .fa-regular {
-        display: none;
-        animation: fade-in 1000ms;
+        transition: opacity 600ms;
+        opacity: 0;
+      }
+      .fa-solid {
+        transition: opacity 600ms;
+        opacity: 1;
       }
     }
   }
