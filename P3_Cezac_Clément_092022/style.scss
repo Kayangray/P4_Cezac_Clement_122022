@@ -4,28 +4,28 @@ body {
   animation: fade-in 5s;
 }
 
+* {
+  font-family: "Roboto";
+}
+
+body {
+  margin: 0;
+  width: 100%;
+}
+
+div,
+p,
+h1,
+h3,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 @media screen and (max-width: 767px) {
-  * {
-    font-family: "Roboto";
-  }
-
-  body {
-    margin: 0;
-    width: 100%;
-  }
-
-  div,
-  p,
-  h1,
-  h3,
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-
   .heading {
-    border-bottom: 1px solid black;
-    padding: 20px 0 5px 0;
+    box-shadow: 0px 2px 5px 2px rgb(179 179 179 / 42%);
+    padding: 10px 0 5px 0;
     position: relative;
   }
 
@@ -55,15 +55,16 @@ body {
     align-items: center;
     background-color: #f7f7f7;
     padding: 50px 0;
-    gap: 20px;
+    gap: 10px;
     div {
-      width: 65%;
-      display: flex;
-      justify-content: center;
+      width: 85%;
+      text-align: center;
     }
-    .first {
-      font-weight: bolder;
-    }
+  }
+
+  .explanation1 {
+    font-weight: bolder;
+    font-size: xx-large;
   }
 
   h2 {
@@ -71,6 +72,7 @@ body {
   }
 
   .btn {
+    margin-top: 20px;
     @include btn;
     span {
       color: white;
@@ -93,13 +95,19 @@ body {
       background-color: $primary;
       color: white;
       border-radius: 50%;
-      width: 20px;
+      width: 10px;
+      height: 10px;
       position: absolute;
       left: -10px;
       padding: 5px;
+      p {
+        display: flex;
+        align-items: center;
+        font-size: small;
+      }
     }
     .icon {
-      width: 80px;
+      width: 60px;
       display: flex;
       justify-content: center;
       margin-left: 10px;
@@ -107,7 +115,7 @@ body {
     }
     span {
       flex: auto;
-      font-weight: bold;
+      font-weight: 600;
     }
   }
 
@@ -180,8 +188,9 @@ body {
       position: relative;
     }
     &:hover {
+      cursor: pointer;
       .fa-regular {
-        transition: opacity 600ms;
+        transition: opacity 1200ms;
         opacity: 0;
       }
       .fa-solid {
@@ -205,7 +214,7 @@ body {
       padding-right: 10px;
     }
     .fa-handshake-angle {
-      padding-right: 5px;
+      padding-right: 4px;
     }
   }
 }
