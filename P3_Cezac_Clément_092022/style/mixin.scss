@@ -55,11 +55,32 @@ $btncolor: linear-gradient(180deg, $secondary, $primary);
   }
 }
 
-@keyframes fade-in {
-  from {
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 1;
+  }
+  100% {
     opacity: 0;
   }
-  to {
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }
@@ -72,6 +93,21 @@ $btncolor: linear-gradient(180deg, $secondary, $primary);
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(10px);
+    opacity: 0;
   }
 }
 

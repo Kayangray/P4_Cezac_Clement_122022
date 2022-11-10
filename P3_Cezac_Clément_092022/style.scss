@@ -1,8 +1,8 @@
 @import "style/mixin.scss";
 
-body {
-  animation: fade-in 5s;
-}
+$dot: 3;
+$anim-dur: 1400ms;
+$anim-delay: $anim-dur/$dot;
 
 * {
   font-family: "Roboto";
@@ -11,6 +11,61 @@ body {
 body {
   margin: 0;
   width: 100%;
+}
+
+.loader-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: fade-out 7000ms forwards;
+}
+
+.loader {
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+  text-align: center;
+  bottom: 50%;
+}
+
+.background {
+  opacity: 0;
+}
+.loader_dot {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: inline-flex;
+  &--1 {
+    opacity: 0;
+    background-color: $primary;
+    animation: loader $anim-dur 3 ease-in-out;
+  }
+  &--2 {
+    opacity: 0;
+    background-color: $secondary;
+    animation: loader $anim-dur 3 ease-in-out;
+  }
+  &--3 {
+    opacity: 0;
+    background-color: $tertiary;
+    animation: loader $anim-dur 3 ease-in-out;
+  }
+  @for $i from 1 through $dot {
+    &--#{$i} {
+      animation-delay: $anim-delay * $i;
+    }
+  }
+}
+
+.heading,
+section-1,
+section,
+footer {
+  animation: fade-in 7000ms forwards;
 }
 
 div,
@@ -22,10 +77,16 @@ ul {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 @media screen and (max-width: 767px) {
   .heading {
-    box-shadow: 0px 2px 5px 2px rgb(179 179 179 / 42%);
     padding: 10px 0 5px 0;
+    box-shadow: 0px 1px 8px 2px rgb(179 179 179 / 82%);
+    margin-bottom: 5px;
     position: relative;
   }
 
@@ -41,7 +102,7 @@ ul {
     padding-right: 35px;
     background-color: #ededed;
     font-weight: bold;
-    padding: 15px 0;
+    padding: 10px 0 15px;
   }
 
   h1,

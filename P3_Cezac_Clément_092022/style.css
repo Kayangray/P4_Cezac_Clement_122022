@@ -1,8 +1,28 @@
-@keyframes fade-in {
-  from {
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 1;
+  }
+  100% {
     opacity: 0;
   }
-  to {
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }
@@ -16,10 +36,20 @@
     opacity: 1;
   }
 }
-body {
-  animation: fade-in 5s;
+@keyframes loader {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
 }
-
 * {
   font-family: "Roboto";
 }
@@ -27,6 +57,66 @@ body {
 body {
   margin: 0;
   width: 100%;
+}
+
+.loader-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: fade-out 7000ms forwards;
+}
+
+.loader {
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+  text-align: center;
+  bottom: 50%;
+}
+
+.background {
+  opacity: 0;
+}
+
+.loader_dot {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: inline-flex;
+}
+.loader_dot--1 {
+  opacity: 0;
+  background-color: #9356dc;
+  animation: loader 1400ms 3 ease-in-out;
+}
+.loader_dot--2 {
+  opacity: 0;
+  background-color: #ff79da;
+  animation: loader 1400ms 3 ease-in-out;
+}
+.loader_dot--3 {
+  opacity: 0;
+  background-color: #99e2d0;
+  animation: loader 1400ms 3 ease-in-out;
+}
+.loader_dot--1 {
+  animation-delay: 466.6666666667ms;
+}
+.loader_dot--2 {
+  animation-delay: 933.3333333333ms;
+}
+.loader_dot--3 {
+  animation-delay: 1400ms;
+}
+
+.heading,
+section-1,
+section,
+footer {
+  animation: fade-in 7000ms forwards;
 }
 
 div,
@@ -38,10 +128,16 @@ ul {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 @media screen and (max-width: 767px) {
   .heading {
-    box-shadow: 0px 2px 5px 2px rgba(179, 179, 179, 0.42);
     padding: 10px 0 5px 0;
+    box-shadow: 0px 1px 8px 2px rgba(179, 179, 179, 0.82);
+    margin-bottom: 5px;
     position: relative;
   }
   .heading,
@@ -55,7 +151,7 @@ ul {
     padding-right: 35px;
     background-color: #ededed;
     font-weight: bold;
-    padding: 15px 0;
+    padding: 10px 0 15px;
   }
   h1,
 h4 {
