@@ -133,6 +133,467 @@ a {
   color: black;
 }
 
+.heading {
+  padding: 10px 0 5px 0;
+  box-shadow: 0px 1px 8px 2px rgba(179, 179, 179, 0.82);
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.heading,
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.location {
+  gap: 20px;
+  padding-right: 35px;
+  background-color: #ededed;
+  font-weight: bold;
+  padding: 10px 0 15px;
+}
+
+h1,
+h4 {
+  font-family: "Shrikhand";
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f7f7f7;
+  padding: 50px 0;
+  gap: 10px;
+}
+nav div {
+  width: 85%;
+  text-align: center;
+}
+
+.explanation1 {
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+h2 {
+  padding-left: 30px;
+}
+
+.btn {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40%;
+  width: auto;
+  height: 50px;
+  background: linear-gradient(180deg, #ff79da, #9356dc);
+  border: none;
+  border-radius: 40px;
+  padding: 0 20px;
+  box-shadow: 0px 5px 8px 0px rgba(179, 179, 179, 0.86);
+}
+.btn:hover {
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.4705882353);
+  background: linear-gradient(180deg, #ffc6ef, #bc95e9);
+  cursor: pointer;
+}
+.btn span {
+  color: white;
+}
+
+.btncontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+
+.functionbtn {
+  width: calc(30% - 35px);
+  display: flex;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgba(229, 229, 229, 0.89);
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  background-color: #f7f7f7;
+  padding-right: 20px;
+}
+.functionbtn:hover {
+  background-color: #f2eafb;
+  cursor: pointer;
+}
+.functionbtn:hover .fa-solid {
+  color: #9356dc;
+}
+.functionbtn .number {
+  display: flex;
+  justify-content: center;
+  background-color: #9356dc;
+  color: white;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: -10px;
+  padding: 5px;
+}
+.functionbtn .number p {
+  display: flex;
+  align-items: center;
+  font-size: small;
+}
+.functionbtn .icon {
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+  color: grey;
+}
+.functionbtn span {
+  flex: auto;
+  font-weight: 600;
+}
+
+.container {
+  background-color: #f7f7f7;
+  padding: 40px 0;
+}
+
+.card_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 5px 5px 5px rgba(229, 229, 229, 0.89);
+  width: 22%;
+}
+.card .card_img {
+  position: relative;
+}
+.card .card_img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.new {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #99e2d0;
+  border-radius: 2px;
+  color: #588378;
+  padding: 5px;
+  font-size: smaller;
+  font-weight: bold;
+  display: flex;
+  width: 75px;
+  justify-content: center;
+}
+
+.card_footer {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+}
+.card_footer .card_footer_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding-left: 15px;
+}
+
+.card_footer_button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0px 30px 10px;
+  font-size: x-large;
+}
+.card_footer_button .fa-solid {
+  background: -webkit-linear-gradient(90deg, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  opacity: 0;
+}
+.card_footer_button .fa-regular {
+  position: relative;
+}
+.card_footer_button:hover {
+  cursor: pointer;
+}
+.card_footer_button:hover .fa-regular {
+  transition: opacity 1200ms;
+  opacity: 0;
+}
+.card_footer_button:hover .fa-solid {
+  transition: opacity 600ms;
+  opacity: 1;
+}
+
+footer {
+  width: calc(100% - 20px);
+  background-color: #333;
+  color: white;
+  padding: 10px 0px 40px 20px;
+}
+footer ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+li {
+  list-style: none;
+  line-height: 25px;
+}
+
+.fa-utensils {
+  padding-right: 10px;
+}
+
+.fa-handshake-angle {
+  padding-right: 4px;
+}
+
+@media screen and (max-width: 1023px) {
+  .heading {
+    padding: 10px 0 5px 0;
+    box-shadow: 0px 1px 8px 2px rgba(179, 179, 179, 0.82);
+    margin-bottom: 5px;
+    position: relative;
+  }
+  .heading,
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .location {
+    gap: 20px;
+    padding-right: 35px;
+    background-color: #ededed;
+    font-weight: bold;
+    padding: 10px 0 15px;
+  }
+  h1,
+h4 {
+    font-family: "Shrikhand";
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7f7f7;
+    padding: 50px 0;
+    gap: 10px;
+  }
+  nav div {
+    width: 85%;
+    text-align: center;
+  }
+  .explanation1 {
+    font-weight: bolder;
+    font-size: xx-large;
+  }
+  h2 {
+    padding-left: 30px;
+  }
+  .btn {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40%;
+    width: auto;
+    height: 50px;
+    background: linear-gradient(180deg, #ff79da, #9356dc);
+    border: none;
+    border-radius: 40px;
+    padding: 0 20px;
+    box-shadow: 0px 5px 8px 0px rgba(179, 179, 179, 0.86);
+  }
+  .btn:hover {
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.4705882353);
+    background: linear-gradient(180deg, #ffc6ef, #bc95e9);
+    cursor: pointer;
+  }
+  .btn span {
+    color: white;
+  }
+  .btncontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 40px;
+  }
+  .functionbtn {
+    width: calc(30% - 35px);
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(229, 229, 229, 0.89);
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    background-color: #f7f7f7;
+    padding-right: 20px;
+  }
+  .functionbtn:hover {
+    background-color: #f2eafb;
+    cursor: pointer;
+  }
+  .functionbtn:hover .fa-solid {
+    color: #9356dc;
+  }
+  .functionbtn .number {
+    display: flex;
+    justify-content: center;
+    background-color: #9356dc;
+    color: white;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: -10px;
+    padding: 5px;
+  }
+  .functionbtn .number p {
+    display: flex;
+    align-items: center;
+    font-size: small;
+  }
+  .functionbtn .icon {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    color: grey;
+  }
+  .functionbtn span {
+    flex: auto;
+    font-weight: 600;
+  }
+  .container {
+    background-color: #f7f7f7;
+    padding: 40px 0;
+  }
+  .card_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+  .card {
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgba(229, 229, 229, 0.89);
+    width: 45%;
+  }
+  .card .card_img {
+    position: relative;
+  }
+  .card .card_img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .new {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #99e2d0;
+    border-radius: 2px;
+    color: #588378;
+    padding: 5px;
+    font-size: smaller;
+    font-weight: bold;
+    display: flex;
+    width: 75px;
+    justify-content: center;
+  }
+  .card_footer {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+  }
+  .card_footer .card_footer_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding-left: 15px;
+  }
+  .card_footer_button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px 30px 10px;
+    font-size: x-large;
+  }
+  .card_footer_button .fa-solid {
+    background: -webkit-linear-gradient(90deg, #ff79da, #9356dc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    opacity: 0;
+  }
+  .card_footer_button .fa-regular {
+    position: relative;
+  }
+  .card_footer_button:hover {
+    cursor: pointer;
+  }
+  .card_footer_button:hover .fa-regular {
+    transition: opacity 1200ms;
+    opacity: 0;
+  }
+  .card_footer_button:hover .fa-solid {
+    transition: opacity 600ms;
+    opacity: 1;
+  }
+  footer {
+    width: calc(100% - 20px);
+    background-color: #333;
+    color: white;
+    padding: 10px 0px 40px 20px;
+  }
+  footer ul {
+    display: block;
+  }
+  footer li {
+    list-style: none;
+    line-height: 25px;
+  }
+  footer .fa-utensils {
+    padding-right: 10px;
+  }
+  footer .fa-handshake-angle {
+    padding-right: 4px;
+  }
+}
 @media screen and (max-width: 767px) {
   .heading {
     padding: 10px 0 5px 0;
@@ -206,15 +667,16 @@ h4 {
     padding-bottom: 40px;
   }
   .functionbtn {
+    width: calc(90% - 35px);
     display: flex;
     border-radius: 20px;
     box-shadow: 5px 5px 5px rgba(229, 229, 229, 0.89);
-    width: 90%;
     position: relative;
     align-items: center;
     justify-content: center;
     height: 60px;
     background-color: #f7f7f7;
+    padding-right: 20px;
   }
   .functionbtn:hover {
     background-color: #f2eafb;

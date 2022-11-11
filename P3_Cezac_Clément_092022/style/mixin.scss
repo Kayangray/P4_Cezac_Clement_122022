@@ -6,7 +6,6 @@ $btncolor: linear-gradient(180deg, $secondary, $primary);
 // MIXINS INDEX + BOUTON BICOLORE
 
 @mixin card {
-  width: 90%;
   border-radius: 20px;
   overflow: hidden;
   background-color: white;
@@ -40,12 +39,12 @@ $btncolor: linear-gradient(180deg, $secondary, $primary);
   display: flex;
   border-radius: 20px;
   box-shadow: 5px 5px 5px rgb(229 229 229 / 89%);
-  width: 90%;
   position: relative;
   align-items: center;
   justify-content: center;
   height: 60px;
   background-color: #f7f7f7;
+  padding-right: 20px;
   &:hover {
     background-color: lighten($primary, 35%);
     cursor: pointer;
