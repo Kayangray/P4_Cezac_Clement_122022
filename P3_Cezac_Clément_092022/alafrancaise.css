@@ -78,6 +78,9 @@ h4 {
 a {
   text-decoration: none;
   color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .heading {
@@ -125,7 +128,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: calc(100% - 40px);
+  width: calc(100% - 80px);
   margin: 0px 20px;
 }
 .menu_title i {
@@ -133,8 +136,7 @@ a {
 }
 
 .plate_type {
-  width: calc(100% - 20px);
-  padding-left: 20px;
+  width: calc(100% - 80px);
 }
 .plate_type h3 {
   font-weight: 100;
@@ -151,7 +153,7 @@ a {
 
 .plate__bar {
   padding: 10px 0px 5px 10px;
-  width: calc(95% - 30px);
+  width: calc(100% - 80px);
   background-color: white;
   border-radius: 10px;
   display: flex;
@@ -286,9 +288,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 40%;
   width: auto;
   height: 50px;
+  width: 200px;
   background: linear-gradient(180deg, #ff79da, #9356dc);
   border: none;
   border-radius: 40px;
@@ -311,478 +313,57 @@ footer {
   padding: 10px 0px 40px 20px;
 }
 footer ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  display: block;
 }
-
-li {
+footer li {
   list-style: none;
   line-height: 25px;
 }
-
-.fa-utensils {
+footer .fa-utensils {
   padding-right: 10px;
 }
-
-.fa-handshake-angle {
+footer .fa-handshake-angle {
   padding-right: 4px;
 }
 
-@media screen and (max-width: 1023px) {
-  .heading {
-    padding: 15px 0 5px 0;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .heading i {
-    position: absolute;
-    left: 20px;
-  }
-  .restaurant-img {
-    position: relative;
-  }
-  .restaurant-img img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    position: relative;
-  }
-  .restaurant-img div {
-    width: 100%;
-    height: 30px;
-    background-color: #f2f2f2;
-    border-radius: 60px 60px 0 0;
-    position: absolute;
-    bottom: 0px;
-  }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .plate {
-    width: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f2f2f2;
-    gap: 10px;
-    position: relative;
-  }
-  .menu_title {
-    display: flex;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 40px;
+    width: calc(100% - 80px);
+    align-items: flex-start;
     justify-content: space-between;
-    width: calc(100% - 40px);
-    margin: 0px 20px;
-  }
-  .menu_title i {
-    font-size: x-large;
-  }
-  .plate_type {
-    width: calc(100% - 20px);
-    padding-left: 20px;
-  }
-  .plate_type h3 {
-    font-weight: 100;
-    font-size: 1em;
-    padding-top: 20px;
-  }
-  .plate_type h3::after {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 2px;
-    background: #99e2d0;
   }
   .plate__bar {
-    padding: 10px 0px 5px 10px;
-    width: calc(95% - 30px);
-    background-color: white;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    box-shadow: 5px 5px 5px rgba(229, 229, 229, 0.89);
-    position: relative;
-    overflow: hidden;
-    opacity: 0;
-    animation: slide-down 1200ms forwards;
-  }
-  .plate__bar--1 {
-    animation-delay: 120ms;
-  }
-  .plate__bar--2 {
-    animation-delay: 240ms;
-  }
-  .plate__bar--3 {
-    animation-delay: 360ms;
-  }
-  .plate__bar--4 {
-    animation-delay: 480ms;
-  }
-  .plate__bar--5 {
-    animation-delay: 600ms;
-  }
-  .plate__bar--6 {
-    animation-delay: 720ms;
-  }
-  .plate__bar--7 {
-    animation-delay: 840ms;
-  }
-  .plate__bar--8 {
-    animation-delay: 960ms;
-  }
-  .plate__bar--9 {
-    animation-delay: 1080ms;
-  }
-  .plate__bar--10 {
-    animation-delay: 1200ms;
-  }
-  .plate_bottom {
-    display: flex;
-    justify-content: space-between;
-  }
-  .plate_name > p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-weight: bold;
-  }
-  .plate_sub {
-    min-width: 0;
-    flex: 1;
-    margin-right: 0;
-    transition: margin-right 600ms;
-    font-size: small;
-  }
-  .plate_sub p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .plate_price {
-    padding: 0 20px 0 10px;
-    transition: all 600ms ease-in-out;
-    font-weight: bold;
-  }
-  .hidden {
-    transition: all 600ms ease-in-out;
-  }
-  .hidden .hidden_icon {
-    height: 20px;
-    width: 20px;
-    color: #99e2d0;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-  }
-  .plate__bar:not(:hover) .hidden {
-    right: -60px;
-    position: absolute;
-    height: 100%;
-    width: 60px;
-    background-color: #99e2d0;
-    display: flex;
-    align-items: center;
-    top: 0;
-    justify-content: center;
-    border-radius: 0 10px 10px 0px;
-  }
-  .plate__bar:hover .hidden {
-    right: 0px;
-    position: absolute;
-    height: 100%;
-    width: 60px;
-    background-color: #99e2d0;
-    display: flex;
-    align-items: center;
-    top: 0;
-    justify-content: center;
-    border-radius: 0 10px 10px 0px;
-  }
-  .plate__bar:hover .hidden_icon {
-    overflow: hidden;
-    transform: rotate(360deg);
-    transition: transform 600ms ease-in-out;
-  }
-  .plate__bar:hover .plate_price {
-    transform: translateX(-60px);
-  }
-  .plate__bar:hover .plate_name {
-    transition: margin-right 600ms ease-in-out;
-    margin-right: 100px;
-  }
-  .plate__bar:hover .plate_sub {
-    transition: margin-right 600ms ease-in-out;
-    margin-right: 60px;
-  }
-  .btn {
-    margin: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 40%;
-    width: auto;
-    height: 50px;
-    background: linear-gradient(180deg, #ff79da, #9356dc);
-    border: none;
-    border-radius: 40px;
-    padding: 0 20px;
-    box-shadow: 0px 5px 8px 0px rgba(179, 179, 179, 0.86);
-  }
-  .btn:hover {
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.4705882353);
-    background: linear-gradient(180deg, #ffc6ef, #bc95e9);
-    cursor: pointer;
-  }
-  .btn span {
-    color: white;
-  }
-  footer {
-    width: calc(100% - 20px);
-    background-color: #333;
-    color: white;
-    padding: 10px 0px 40px 20px;
-  }
-  footer li {
-    list-style: none;
-    line-height: 25px;
-  }
-  footer .fa-utensils {
-    padding-right: 10px;
-  }
-  footer .fa-handshake-angle {
-    padding-right: 4px;
+    width: 45%;
   }
 }
-@media screen and (max-width: 767px) {
-  .heading {
-    padding: 15px 0 5px 0;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .heading i {
-    position: absolute;
-    left: 20px;
-  }
-  .restaurant-img {
-    position: relative;
-  }
+@media screen and (min-width: 1024px) {
   .restaurant-img img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    position: relative;
-  }
-  .restaurant-img div {
-    width: 100%;
-    height: 30px;
-    background-color: #f2f2f2;
-    border-radius: 60px 60px 0 0;
-    position: absolute;
-    bottom: 0px;
+    height: 400px;
   }
   .plate {
-    width: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f2f2f2;
-    gap: 10px;
-    position: relative;
-  }
-  .menu_title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: calc(100% - 40px);
-    margin: 0px 20px;
-  }
-  .menu_title i {
-    font-size: x-large;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 40px;
+    width: calc(100% - 80px);
   }
   .plate_type {
-    width: calc(100% - 20px);
-    padding-left: 20px;
+    width: calc(100% - 40px);
   }
-  .plate_type h3 {
-    font-weight: 100;
-    font-size: 1em;
-    padding-top: 20px;
-  }
-  .plate_type h3::after {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 2px;
-    background: #99e2d0;
+  .menu_title {
+    margin: 0;
+    width: calc(100% - 40px);
   }
   .plate__bar {
-    padding: 10px 0px 5px 10px;
-    width: calc(95% - 30px);
-    background-color: white;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    box-shadow: 5px 5px 5px rgba(229, 229, 229, 0.89);
-    position: relative;
-    overflow: hidden;
-    opacity: 0;
-    animation: slide-down 1200ms forwards;
+    width: calc(33% - 30px);
   }
-  .plate__bar--1 {
-    animation-delay: 120ms;
-  }
-  .plate__bar--2 {
-    animation-delay: 240ms;
-  }
-  .plate__bar--3 {
-    animation-delay: 360ms;
-  }
-  .plate__bar--4 {
-    animation-delay: 480ms;
-  }
-  .plate__bar--5 {
-    animation-delay: 600ms;
-  }
-  .plate__bar--6 {
-    animation-delay: 720ms;
-  }
-  .plate__bar--7 {
-    animation-delay: 840ms;
-  }
-  .plate__bar--8 {
-    animation-delay: 960ms;
-  }
-  .plate__bar--9 {
-    animation-delay: 1080ms;
-  }
-  .plate__bar--10 {
-    animation-delay: 1200ms;
-  }
-  .plate_bottom {
-    display: flex;
-    justify-content: space-between;
-  }
-  .plate_name > p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-weight: bold;
-  }
-  .plate_sub {
-    min-width: 0;
-    flex: 1;
-    margin-right: 0;
-    transition: margin-right 600ms;
-    font-size: small;
-  }
-  .plate_sub p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .plate_price {
-    padding: 0 20px 0 10px;
-    transition: all 600ms ease-in-out;
-    font-weight: bold;
-  }
-  .hidden {
-    transition: all 600ms ease-in-out;
-  }
-  .hidden .hidden_icon {
-    height: 20px;
-    width: 20px;
-    color: #99e2d0;
-    background-color: white;
+  footer ul {
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-  }
-  .plate__bar:not(:hover) .hidden {
-    right: -60px;
-    position: absolute;
-    height: 100%;
-    width: 60px;
-    background-color: #99e2d0;
-    display: flex;
-    align-items: center;
-    top: 0;
-    justify-content: center;
-    border-radius: 0 10px 10px 0px;
-  }
-  .plate__bar:hover .hidden {
-    right: 0px;
-    position: absolute;
-    height: 100%;
-    width: 60px;
-    background-color: #99e2d0;
-    display: flex;
-    align-items: center;
-    top: 0;
-    justify-content: center;
-    border-radius: 0 10px 10px 0px;
-  }
-  .plate__bar:hover .hidden_icon {
-    overflow: hidden;
-    transform: rotate(360deg);
-    transition: transform 600ms ease-in-out;
-  }
-  .plate__bar:hover .plate_price {
-    transform: translateX(-60px);
-  }
-  .plate__bar:hover .plate_name {
-    transition: margin-right 600ms ease-in-out;
-    margin-right: 100px;
-  }
-  .plate__bar:hover .plate_sub {
-    transition: margin-right 600ms ease-in-out;
-    margin-right: 60px;
-  }
-  .btn {
-    margin: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 40%;
-    width: auto;
-    height: 50px;
-    background: linear-gradient(180deg, #ff79da, #9356dc);
-    border: none;
-    border-radius: 40px;
-    padding: 0 20px;
-    box-shadow: 0px 5px 8px 0px rgba(179, 179, 179, 0.86);
-  }
-  .btn:hover {
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.4705882353);
-    background: linear-gradient(180deg, #ffc6ef, #bc95e9);
-    cursor: pointer;
-  }
-  .btn span {
-    color: white;
-  }
-  footer {
-    width: calc(100% - 20px);
-    background-color: #333;
-    color: white;
-    padding: 10px 0px 40px 20px;
-  }
-  footer li {
-    list-style: none;
-    line-height: 25px;
-  }
-  footer .fa-utensils {
-    padding-right: 10px;
-  }
-  footer .fa-handshake-angle {
-    padding-right: 4px;
+    justify-content: space-around;
   }
 }
 
