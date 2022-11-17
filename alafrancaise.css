@@ -283,6 +283,12 @@ a {
   margin-right: 60px;
 }
 
+.btn_cmd {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .btn {
   margin: 20px 0;
   display: flex;
