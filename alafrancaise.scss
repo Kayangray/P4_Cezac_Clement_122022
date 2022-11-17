@@ -218,8 +218,9 @@ footer {
   li {
     list-style: none;
     line-height: 25px;
-    span > a {
+    a {
       color: white;
+      display: block;
     }
   }
   .fa-utensils {
