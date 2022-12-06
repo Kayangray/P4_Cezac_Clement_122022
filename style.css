@@ -786,6 +786,11 @@ h4 {
   font-size: large;
 }
 
+.logo-socials {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .tc-white {
   color: white !important;
 }
