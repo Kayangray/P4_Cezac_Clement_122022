@@ -781,9 +781,6 @@ h4 {
   color: white !important;
 }
 
-#bloc-5-cta {
-}
-
 .btn-atomic-tangerine {
   background: #f3976c;
   color: #ffffff !important;
@@ -987,6 +984,9 @@ h4 {
   .bloc-xl,
   .bloc-lg {
     padding: 40px 0;
+  }
+  .portfolio-thumb {
+    width: 100%;
   }
   .bloc-sm,
   .bloc-md {
