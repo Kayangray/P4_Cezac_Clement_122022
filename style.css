@@ -705,6 +705,8 @@ p {
   padding: 20px 0;
   max-width: 400px;
   margin: auto auto auto auto;
+  display: flex;
+  justify-content: center;
 }
 
 h2 {
@@ -784,11 +786,6 @@ h4 {
 
 .citation {
   font-size: large;
-}
-
-.logo-socials {
-  display: flex;
-  justify-content: space-evenly;
 }
 
 .tc-white {
